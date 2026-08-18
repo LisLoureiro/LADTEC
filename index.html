@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LADTEC — Apresentação, Marca e Templates</title>
+<meta name="description" content="Apresentação, diretriz de marca, arquivos de logotipo e templates da Liga Acadêmica de Direito e Tecnologia.">
+<link rel="icon" type="image/png" href="assets/img/logo/favicon-256.png">
+<link rel="apple-touch-icon" href="assets/img/logo/avatar-1024.png">
+<meta property="og:title" content="LADTEC — Liga Acadêmica de Direito e Tecnologia">
+<meta property="og:description" content="Apresentação, diretriz de marca, arquivos de logotipo e templates.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/logo/avatar-1024.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bordo:#6B1F2E; --bordo-fundo:#3F1119; --prata:#A8ADB4; --prata-clara:#DCDFE1;
+  --papel:#F4F1EC; --tinta:#1C1B1A; --grafite:#55524E;
+  --serif:'Instrument Serif',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--sans);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.eyebrow{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grafite);margin:0}
+
+/* ---------- assinatura construída ---------- */
+.marca{font-family:var(--serif);letter-spacing:.02em;line-height:1;white-space:nowrap;display:inline-block}
+.marca .lad{color:var(--tinta)}
+.marca .tec{color:var(--bordo)}
+.marca .barra{display:inline-block;width:.075em;height:.80em;background:var(--tinta);margin:0 .20em;vertical-align:baseline}
+.marca.negativa .lad,.marca.negativa .tec{color:var(--papel)}
+.marca.negativa .barra{background:var(--prata)}
+.marca.mono .lad,.marca.mono .tec{color:var(--bordo)}
+.marca.mono .barra{background:var(--bordo)}
+.descritor-marca{font-family:var(--sans);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--grafite);text-align:center;line-height:1.5}
+
+/* ---------- topo ---------- */
+.capa{background:var(--bordo-fundo);color:var(--papel);padding:clamp(40px,7vw,76px) clamp(24px,6vw,72px) clamp(30px,5vw,52px)}
+.capa .nome{font-family:var(--serif);font-size:clamp(40px,8vw,72px);line-height:1;letter-spacing:.02em;margin:0;font-weight:400}
+.capa .nome .barra{display:inline-block;width:.075em;height:.80em;background:var(--prata);margin:0 .20em;vertical-align:baseline}
+.capa .descritor{font-family:var(--sans);font-weight:500;font-size:clamp(10px,1.4vw,12px);letter-spacing:.22em;text-transform:uppercase;color:var(--prata);margin:18px 0 0}
+
+/* ---------- navegação de páginas ---------- */
+.nav{position:sticky;top:0;z-index:30;background:var(--bordo-fundo);border-bottom:1px solid rgba(244,241,236,.18);display:flex;gap:2px;overflow-x:auto;padding:0 clamp(16px,6vw,72px)}
+.nav button{border:none;background:none;font:inherit;font-size:14px;color:var(--prata);padding:14px 16px;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+.nav button:hover{color:var(--papel)}
+.nav button[aria-selected="true"]{color:var(--papel);border-bottom-color:var(--bordo)}
+.nav button:focus-visible{outline:2px solid var(--prata);outline-offset:-4px}
+.nav .num{font-family:var(--mono);font-size:11px;opacity:.6;margin-right:7px}
+
+.pagina{max-width:1160px;margin:0 auto;padding:44px clamp(20px,5vw,56px) 90px}
+.pagina[hidden]{display:none}
+
+.secao{padding:14px 0 8px;scroll-margin-top:70px}
+.secao h2{font-family:var(--serif);font-size:clamp(30px,4.4vw,42px);font-weight:400;line-height:1.12;margin:10px 0 18px}
+.secao h3{font-family:var(--sans);font-weight:500;font-size:15px;margin:36px 0 12px}
+.secao p{margin:0 0 16px;max-width:62ch}
+.secao p.sub{color:var(--grafite)}
+.secao ul{margin:0 0 16px;padding-left:20px;max-width:62ch}
+.secao li{margin:0 0 8px}
+
+.divisor{display:flex;align-items:center;gap:0;margin:40px 0}
+.divisor .fio{height:1px;background:var(--prata);flex:1}
+.divisor .barra-div{width:1px;height:34px;background:var(--bordo);flex:none}
+
+/* ---------- índice interno ---------- */
+.mini-indice{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 34px}
+.mini-indice a{font-size:12.5px;color:var(--grafite);text-decoration:none;border:1px solid var(--prata-clara);border-radius:100px;padding:4px 14px}
+.mini-indice a:hover{border-color:var(--bordo);color:var(--bordo)}
+
+/* ---------- apresentação ---------- */
+.hero{display:flex;flex-direction:column;gap:28px;margin:0 0 20px}
+.hero .frase{font-family:var(--serif);font-size:clamp(30px,4.6vw,46px);line-height:1.16;margin:0;max-width:26ch}
+.hero .frase em{color:var(--bordo)}
+.eixos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:8px 0 20px}
+.eixo{border:1px solid var(--prata-clara);border-radius:8px;padding:24px;background:#fff}
+.eixo .n{font-family:var(--mono);font-size:11px;color:var(--prata);letter-spacing:.1em}
+.eixo h4{font-family:var(--serif);font-weight:400;font-size:24px;margin:10px 0 8px;line-height:1.15}
+.eixo p{font-size:13.5px;color:var(--grafite);margin:0;line-height:1.6}
+.numeros{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:0 0 24px}
+.numero{border-left:2px solid var(--bordo);padding:2px 0 2px 16px}
+.numero strong{display:block;font-family:var(--serif);font-size:38px;line-height:1;font-weight:400}
+.numero span{font-size:12.5px;color:var(--grafite)}
+.confirmar{background:var(--prata-clara);border-radius:6px;padding:16px 18px;font-size:13.5px;color:var(--grafite);margin:0 0 16px;max-width:62ch}
+.confirmar strong{color:var(--tinta)}
+
+/* ---------- pranchas ---------- */
+.pranchas{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:0 0 18px}
+.prancha{border:1px solid var(--prata-clara);border-radius:6px;padding:30px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:170px;background:#fff}
+.prancha.escura{background:var(--bordo-fundo);border-color:var(--bordo-fundo)}
+.legenda{font-size:12px;color:var(--grafite);margin:8px 0 0;text-align:center}
+
+/* ---------- paleta ---------- */
+.paleta{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:16px;margin:0 0 14px}
+.chip{border:none;padding:0;background:none;text-align:left;cursor:pointer;font:inherit;border-radius:8px;display:block}
+.chip:focus-visible{outline:2px solid var(--bordo);outline-offset:3px}
+.chip .amostra{height:184px;border-radius:8px;border:1px solid rgba(28,27,26,.10);display:flex;flex-direction:column;justify-content:space-between;padding:18px}
+.chip .amostra .nome-cor{font-family:var(--serif);font-size:26px;line-height:1.1}
+.chip .amostra .hex-cor{font-family:var(--mono);font-size:14px;letter-spacing:.08em}
+.chip .amostra .rgb-cor{font-family:var(--mono);font-size:11px;letter-spacing:.04em;opacity:.72;display:block;margin-top:2px}
+.chip .uso{display:block;font-size:12.5px;color:var(--grafite);line-height:1.5;margin-top:10px}
+.chip:hover .amostra{border-color:var(--bordo)}
+
+/* ---------- tipografia ---------- */
+.specimen{border-top:1px solid var(--prata-clara);padding:22px 0}
+.specimen .amostra-serif{font-family:var(--serif);font-size:clamp(34px,5vw,52px);line-height:1.1;margin:0 0 10px}
+.specimen .amostra-sans{font-family:var(--sans);font-size:22px;line-height:1.5;margin:0 0 10px}
+.specimen .amostra-mono{font-family:var(--mono);font-size:16px;letter-spacing:.06em;margin:0 0 10px}
+.specimen .ficha{font-size:13px;color:var(--grafite);margin:0;max-width:62ch}
+
+table{width:100%;border-collapse:collapse;margin:0 0 20px;font-size:14px}
+th{text-align:left;font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grafite);padding:0 12px 9px 0;border-bottom:1px solid var(--prata)}
+td{padding:11px 12px 11px 0;border-bottom:1px solid var(--prata-clara);vertical-align:top}
+td.med{font-family:var(--mono);font-size:12px}
+
+/* ---------- voz ---------- */
+.par{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin:0 0 16px}
+.fala{padding:18px 20px;border-radius:6px;font-size:15px;line-height:1.6}
+.fala.nao{background:var(--prata-clara);color:var(--grafite)}
+.fala.sim{background:var(--bordo);color:var(--papel)}
+.fala .marca-fala{display:block;font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 8px;opacity:.75}
+.vetado{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.vetado span{font-size:13px;color:var(--grafite);border:1px solid var(--prata);border-radius:100px;padding:4px 14px;text-decoration:line-through}
+
+.aviso{border-left:2px solid var(--bordo);padding:2px 0 2px 18px;margin:0 0 18px;max-width:62ch}
+.aviso p{margin:0 0 8px}
+.aviso p:last-child{margin:0}
+.proibidos{list-style:none;padding:0;max-width:62ch}
+.proibidos li{padding-left:22px;position:relative}
+.proibidos li::before{content:"×";position:absolute;left:0;color:var(--bordo);font-size:16px;line-height:1.6}
+.pendencias{list-style:none;padding:0}
+.pendencias li{padding-left:26px;position:relative;color:var(--grafite)}
+.pendencias li::before{content:"";position:absolute;left:0;top:9px;width:11px;height:11px;border:1px solid var(--prata);border-radius:2px}
+
+/* ---------- exploração ---------- */
+.exploracao{border:1px dashed var(--prata);border-radius:8px;padding:26px 24px;background:#fff;display:flex;align-items:center;justify-content:center;min-height:150px}
+.selo{display:inline-block;font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--grafite);border:1px solid var(--prata);border-radius:100px;padding:3px 12px}
+.sobreposto{font-family:var(--serif);line-height:1;display:inline-block;isolation:isolate}
+.sobreposto span{display:inline-block}
+.sobreposto .b{mix-blend-mode:multiply;color:var(--bordo)}
+.sobreposto .a{color:var(--tinta)}
+
+/* ---------- página de imagens ---------- */
+.ativos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:0 0 30px}
+.ativo{border:1px solid var(--prata-clara);border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.ativo .visor{padding:26px 22px;display:flex;align-items:center;justify-content:center;min-height:130px;border-bottom:1px solid var(--prata-clara)}
+.ativo .visor.claro{background:var(--papel)}
+.ativo .visor.escuro{background:var(--bordo-fundo)}
+.ativo .visor.xadrez{background-color:#fff;background-image:linear-gradient(45deg,#EDEAE4 25%,transparent 25%),linear-gradient(-45deg,#EDEAE4 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#EDEAE4 75%),linear-gradient(-45deg,transparent 75%,#EDEAE4 75%);background-size:16px 16px;background-position:0 0,0 8px,8px -8px,-8px 0}
+.ativo .visor img{max-width:100%;max-height:110px;display:block}
+.ativo .info{padding:14px 16px 18px;display:flex;flex-direction:column;gap:5px;flex:1}
+.ativo .info strong{font-size:13.5px}
+.ativo .info span{font-size:12.5px;color:var(--grafite);line-height:1.5;flex:1}
+.ativo .info .px{font-family:var(--mono);font-size:11px;color:var(--prata)}
+.link-baixar{align-self:flex-start;margin-top:8px;font-size:13px;text-decoration:none;border:1px solid var(--bordo);color:var(--bordo);border-radius:100px;padding:5px 16px}
+.link-baixar:hover{background:var(--bordo);color:var(--papel)}
+.link-baixar:focus-visible{outline:2px solid var(--bordo);outline-offset:2px}
+
+.referencias{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:18px 0 22px}
+.referencia{margin:0;border:1px solid var(--prata-clara);background:#fff;border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.referencia img{display:block;width:100%;height:auto;object-fit:contain;background:var(--papel)}
+.referencia figcaption{padding:12px 14px 14px;font-size:12px;color:var(--grafite)}
+.referencia figcaption strong{display:block;color:var(--tinta);font-size:13px;margin-bottom:3px}
+
+/* ---------- templates ---------- */
+.abas{display:flex;gap:4px;overflow-x:auto;border-bottom:1px solid var(--prata-clara);margin:0 0 28px}
+.aba{border:none;background:none;font:inherit;font-size:14px;color:var(--grafite);padding:12px 14px;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+.aba:hover{color:var(--bordo)}
+.aba[aria-selected="true"]{color:var(--tinta);border-bottom-color:var(--bordo)}
+.aba:focus-visible{outline:2px solid var(--bordo);outline-offset:-4px}
+.painel[hidden]{display:none}
+.grade{display:flex;flex-wrap:wrap;gap:26px;align-items:flex-start}
+.peca{max-width:100%}
+.cabeca{display:flex;align-items:center;gap:12px;margin:0 0 10px;flex-wrap:wrap}
+.cabeca .nome{font-size:13px;font-weight:500}
+.cabeca .dim{font-family:var(--mono);font-size:11px;color:var(--prata)}
+.baixar{font:inherit;font-size:13px;border:1px solid var(--bordo);color:var(--bordo);background:none;border-radius:100px;padding:5px 16px;cursor:pointer}
+.baixar:hover{background:var(--bordo);color:var(--papel)}
+.baixar:disabled{opacity:.5;cursor:wait}
+.palco{position:relative;overflow:hidden;border:1px solid var(--prata-clara);border-radius:4px;max-width:100%}
+.arte{transform-origin:top left}
+.arte [contenteditable]{outline:none}
+.arte [contenteditable]:hover{box-shadow:0 0 0 1px var(--prata)}
+.arte [contenteditable]:focus{box-shadow:0 0 0 1px var(--bordo)}
+.dica{font-size:12px;color:var(--grafite);margin:10px 0 0;max-width:46ch}
+.email-preview{border:1px solid var(--prata-clara);border-radius:6px;background:#fff;padding:26px;max-width:520px}
+.copiar{font:inherit;font-size:13px;border:1px solid var(--bordo);color:var(--bordo);background:none;border-radius:100px;padding:5px 16px;cursor:pointer;margin-top:16px}
+.copiar:hover{background:var(--bordo);color:var(--papel)}
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin:22px 0}
+.doc{margin:0;border:1px solid var(--prata-clara);border-radius:6px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.doc img{display:block;width:100%;height:auto;border-bottom:1px solid var(--prata-clara)}
+.doc figcaption{padding:14px 16px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.doc figcaption strong{font-size:14px}
+.doc figcaption span{font-size:12.5px;color:var(--grafite);line-height:1.5;flex:1}
+
+footer{background:var(--bordo-fundo);color:var(--prata);padding:44px clamp(24px,6vw,72px)}
+footer p{margin:0 0 6px;font-size:13px;max-width:62ch}
+footer strong{color:var(--papel);font-weight:500}
+
+#toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:var(--tinta);color:var(--papel);font-size:13px;padding:9px 18px;border-radius:100px;opacity:0;pointer-events:none;transition:opacity .18s;z-index:60}
+#toast.on{opacity:1}
+</style>
+</head>
+<body>
+
+<header class="capa">
+  <p class="nome" aria-label="LADTEC"><span aria-hidden="true">LAD</span><span class="barra" aria-hidden="true"></span><span aria-hidden="true">TEC</span></p>
+  <p class="descritor">Liga Acadêmica de Direito e Tecnologia</p>
+</header>
+
+<nav class="nav" role="tablist" aria-label="Páginas">
+  <button role="tab" id="n1" aria-controls="pg1" aria-selected="true"><span class="num">01</span>Apresentação</button>
+  <button role="tab" id="n2" aria-controls="pg2" aria-selected="false"><span class="num">02</span>Diretriz de marca</button>
+  <button role="tab" id="n3" aria-controls="pg3" aria-selected="false"><span class="num">03</span>Imagens</button>
+  <button role="tab" id="n4" aria-controls="pg4" aria-selected="false"><span class="num">04</span>Templates</button>
+</nav>
+
+<!-- ================= 01 · APRESENTAÇÃO ================= -->
+<div class="pagina" role="tabpanel" id="pg1" aria-labelledby="n1">
+
+  <section class="secao">
+    <div class="hero">
+      <p class="eyebrow">Quem somos</p>
+      <p class="frase">A tecnologia já mudou o Direito. A <em>doutrina</em> ainda está decidindo o que fazer com isso.</p>
+    </div>
+    <p>A LADTEC é uma liga acadêmica dedicada a estudar, com método e rigor, o que a tecnologia está fazendo com o Direito — e o que o Direito pode fazer com a tecnologia. Não somos um grupo de entusiasmo tecnológico nem um clube de ceticismo: somos um espaço de pesquisa.</p>
+    <p>A liga existe porque há uma defasagem real. Sistemas de decisão automatizada, modelos de linguagem, análise de dados judiciais e infraestrutura digital já operam dentro do sistema de justiça, enquanto a formação jurídica ainda os trata como assunto de especialista. Nossa aposta é que essa separação não se sustenta.</p>
+  </section>
+
+  <div class="divisor" role="presentation"><span class="fio"></span><span class="barra-div"></span><span class="fio"></span></div>
+
+  <section class="secao">
+    <p class="eyebrow">Eixos de trabalho</p>
+    <h2>Três frentes, um objeto</h2>
+    <div class="eixos">
+      <div class="eixo">
+        <span class="n">01</span>
+        <h4>Inteligência artificial e Direito</h4>
+        <p>Como sistemas automatizados afetam responsabilidade civil, prova, dever de motivação e devido processo. Do erro do modelo à atribuição jurídica desse erro.</p>
+      </div>
+      <div class="eixo">
+        <span class="n">02</span>
+        <h4>Ciência de dados aplicada ao Direito</h4>
+        <p>O que se pode aprender de jurisprudência, petições e dados públicos quando tratados como dados — e quais conclusões o método não autoriza.</p>
+      </div>
+      <div class="eixo">
+        <span class="n">03</span>
+        <h4>Aproximação entre os campos</h4>
+        <p>Traduzir tecnologia para juristas e Direito para quem constrói tecnologia. Formação, vocabulário comum e prática compartilhada.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divisor" role="presentation"><span class="fio"></span><span class="barra-div"></span><span class="fio"></span></div>
+
+  <section class="secao">
+    <p class="eyebrow">Como funciona</p>
+    <h2>O que a liga faz na prática</h2>
+    <ul>
+      <li><strong>Encontros de estudo</strong> — leitura e discussão de casos, decisões e artigos, com preparação prévia e registro em ata.</li>
+      <li><strong>Grupos de pesquisa</strong> — recortes temáticos que produzem artigo, parecer ou relatório ao fim do ciclo.</li>
+      <li><strong>Produção acadêmica</strong> — submissão a eventos e periódicos, com apoio metodológico interno.</li>
+      <li><strong>Formação aberta</strong> — oficinas e palestras para quem está começando, em linguagem acessível a estudantes de Direito sem base técnica.</li>
+      <li><strong>Divulgação</strong> — conteúdo público que traduz o que a liga estuda, sem simplificação enganosa.</li>
+    </ul>
+
+    <div class="numeros">
+      <div class="numero"><strong>03</strong><span>eixos de pesquisa</span></div>
+      <div class="numero"><strong>00</strong><span>encontros realizados</span></div>
+      <div class="numero"><strong>00</strong><span>membros ativos</span></div>
+      <div class="numero"><strong>2026</strong><span>ano de fundação</span></div>
+    </div>
+    <p class="confirmar"><strong>A confirmar antes de publicar:</strong> instituição de vínculo, nome do professor ou professora orientadora, periodicidade dos encontros, número de membros, processo seletivo e canais oficiais. Os campos com <span style="font-family:var(--mono)">00</span> e o e-mail são exemplo.</p>
+  </section>
+
+  <div class="divisor" role="presentation"><span class="fio"></span><span class="barra-div"></span><span class="fio"></span></div>
+
+  <section class="secao">
+    <p class="eyebrow">Quem pode participar</p>
+    <h2>Não é preciso saber programar</h2>
+    <p>A liga é aberta a estudantes de Direito, de Computação e de áreas afins. Quem chega do Direito não precisa de base técnica; quem chega da tecnologia não precisa de formação jurídica. A exigência é outra: disposição para ler o que não domina e para escrever com precisão.</p>
+    <p>O que se pede de todo membro é constância nos encontros, preparação prévia da leitura e participação em ao menos um produto por ciclo — um artigo, uma oficina, um relatório.</p>
+
+    <h3>Contato</h3>
+    <p class="sub">contato@ladtec.org · @ladtec · Vitória da Conquista, Bahia</p>
+  </section>
+</div>
+
+<!-- ================= 02 · DIRETRIZ DE MARCA ================= -->
+<div class="pagina" role="tabpanel" id="pg2" aria-labelledby="n2" hidden>
+
+  <nav class="mini-indice" aria-label="Seções da diretriz">
+    <a href="#tese">A tese</a>
+    <a href="#logotipo">Logotipo</a>
+    <a href="#paleta">Paleta</a>
+    <a href="#tipografia">Tipografia</a>
+    <a href="#voz">Tom de voz</a>
+    <a href="#aplicacoes">Aplicações</a>
+    <a href="#pendencias">Pendências</a>
+    <a href="#exploracao">Exploração</a>
+  </nav>
+
+  <section class="secao" id="tese">
+    <p class="eyebrow">§1</p>
+    <h2>A tese da marca</h2>
+    <p>A identidade traduz o objeto da liga numa tensão deliberada entre duas linguagens. O <strong>bordô</strong> carrega a tradição jurídica: a toga, a encadernação, o requinte da doutrina. A <strong>prata</strong> organiza o sistema: linhas, molduras, divisores e acabamento.</p>
+    <p>A marca não resolve essa tensão — ela a encena. Todo material da LADTEC deve parecer uma publicação séria de Direito construída por alguém que entende de máquina.</p>
+    <div class="aviso">
+      <p><strong>Personalidade:</strong> rigorosa, curiosa, didática, não-solene.</p>
+      <p><strong>Nunca:</strong> entusiasmada com tecnologia por si mesma, futurista, alarmista.</p>
+    </div>
+  </section>
+
+  <div class="divisor" role="presentation"><span class="fio"></span><span class="barra-div"></span><span class="fio"></span></div>
+
+  <section class="secao" id="logotipo">
+    <p class="eyebrow">§2</p>
+    <h2>Logotipo e sistema de marca</h2>
+    <p>A marca é a palavra. Não há símbolo figurativo: a assinatura é o encontro tipográfico entre <strong>LAD</strong> e <strong>TEC</strong>, articulados por uma barra vertical. Os arquivos prontos estão na página <strong>Imagens</strong>.</p>
+
+    <h3>2.1 Assinatura principal</h3>
+    <div class="pranchas">
+      <div>
+        <div class="prancha">
+          <div class="marca" style="font-size:52px"><span class="lad">LAD</span><span class="barra"></span><span class="tec">TEC</span></div>
+          <div class="descritor-marca">Liga Acadêmica de Direito e Tecnologia</div>
+        </div>
+        <p class="legenda">Positiva · sobre Papel</p>
+      </div>
+      <div>
+        <div class="prancha escura">
+          <div class="marca negativa" style="font-size:52px"><span class="lad">LAD</span><span class="barra"></span><span class="tec">TEC</span></div>
+          <div class="descritor-marca" style="color:var(--prata)">Liga Acadêmica de Direito e Tecnologia</div>
+        </div>
+        <p class="legenda">Negativa · capa, slide e fundos Bordô</p>
+      </div>
+      <div>
+        <div class="prancha">
+          <div class="marca mono" style="font-size:52px"><span class="lad">LAD</span><span class="barra"></span><span class="tec">TEC</span></div>
+          <div class="descritor-marca">Liga Acadêmica de Direito e Tecnologia</div>
+        </div>
+        <p class="legenda">Monocromática · carimbo, gravação, bordado</p>
+      </div>
+    </div>
+
+    <h3>2.2 A regra de cor da assinatura</h3>
+    <ul>
+      <li><strong>O bordô marca exclusivamente TEC.</strong> É a única coisa que ele significa dentro da assinatura.</li>
+      <li><strong>A barra é sempre neutra</strong> — Tinta sobre fundo claro, Prata sobre fundo escuro. Nunca bordô, porque bordô já tem dono.</li>
+      <li><strong>Sobre fundo bordô a distinção se suspende</strong> e a marca vai a uma cor só.</li>
+    </ul>
+
+    <h3>2.3 Construção da barra</h3>
+    <p class="sub">A barra <strong>não é o caractere <span style="font-family:var(--mono);font-size:13px">|</span> digitado</strong>. Ela é um filete desenhado, com medidas relativas ao corpo do logotipo.</p>
+    <table>
+      <thead><tr><th>Atributo</th><th>Medida</th><th>Em um logotipo de 100px</th></tr></thead>
+      <tbody>
+        <tr><td>Espessura</td><td class="med">0,075 em</td><td class="med">7,5 px</td></tr>
+        <tr><td>Altura</td><td class="med">0,80 em</td><td class="med">80 px</td></tr>
+        <tr><td>Afastamento lateral</td><td class="med">0,20 em de cada lado</td><td class="med">20 px</td></tr>
+        <tr><td>Tracking do nome</td><td class="med">0,02 em</td><td class="med">2 px</td></tr>
+      </tbody>
+    </table>
+
+    <h3>2.4 O que a barra significa</h3>
+    <p>A barra é a <strong>interface</strong>: a superfície onde dois sistemas se tocam e trocam. Não é decoração e não é um "e" comercial. Uma barra vertical, tipograficamente, significa separação — chamá-la de "encontro" faria a forma e o texto dizerem coisas opostas. Interface é o nome que a computação dá à fronteira onde dois sistemas se comunicam, e é isso que a LADTEC estuda.</p>
+
+    <h3>2.5 O ponto de articulação</h3>
+    <p class="sub">O ponto é <strong>a barra vista de longe</strong> — a mesma articulação, reduzida, para peças onde a barra ficaria pesada.</p>
+    <ul>
+      <li><strong>Diâmetro:</strong> 3× a espessura da barra. <strong>Cor:</strong> Bordô, sempre.</li>
+      <li><strong>Posição:</strong> centrado sobre filete horizontal de Prata de 1px.</li>
+      <li><strong>Nunca:</strong> dentro da assinatura, solto no espaço, repetido em série ou como bullet.</li>
+    </ul>
+    <div class="prancha" style="min-height:auto;padding:34px 24px">
+      <div style="display:flex;align-items:center;width:min(560px,100%)">
+        <span style="height:1px;background:var(--prata);flex:1"></span>
+        <span style="width:1px;height:44px;background:var(--bordo);flex:none"></span>
+        <span style="height:1px;background:var(--prata);flex:1"></span>
+      </div>
+      <p class="legenda" style="margin:0">Divisor com barra · peças a partir de A5 e slides</p>
+      <div style="display:flex;align-items:center;width:min(560px,100%);margin-top:14px">
+        <span style="height:1px;background:var(--prata);flex:1"></span>
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--bordo);flex:none"></span>
+        <span style="height:1px;background:var(--prata);flex:1"></span>
+      </div>
+      <p class="legenda" style="margin:0">Divisor com ponto · Instagram, certificado e peças pequenas</p>
+    </div>
+
+    <h3>2.6 Área de proteção e redução mínima</h3>
+    <ul>
+      <li><strong>Área de proteção:</strong> margem livre igual à altura da letra <strong>L</strong> em todos os lados.</li>
+      <li><strong>Redução mínima com descritor:</strong> 120px em tela, 34mm em impresso.</li>
+      <li><strong>Redução mínima sem descritor:</strong> 90px em tela, 25mm em impresso.</li>
+      <li><strong>Descritor:</strong> mínimo de 8pt ou 11px. Abaixo disso é suprimido.</li>
+    </ul>
+
+    <h3>2.7 Avatar e favicon</h3>
+    <p class="sub">O Instagram serve o avatar em 40px no feed e cerca de 32px em comentários. A assinatura completa não sobrevive a isso — as sete letras em serifa de alto contraste empastam.</p>
+    <table>
+      <thead><tr><th>Tamanho</th><th>Versão</th></tr></thead>
+      <tbody>
+        <tr><td class="med">64px ou mais</td><td>Assinatura completa <strong>LAD | TEC</strong> em negativo sobre disco Bordô profundo</td></tr>
+        <tr><td class="med">32 a 63px</td><td>Marca de canto <strong>L | T</strong>, mesma construção de barra</td></tr>
+        <tr><td class="med">Abaixo de 32px</td><td>Apenas o <strong>L</strong> em Instrument Serif, Papel sobre Bordô</td></tr>
+      </tbody>
+    </table>
+
+    <h3>2.8 Usos proibidos</h3>
+    <ul class="proibidos">
+      <li>Digitar a barra como caractere <span style="font-family:var(--mono);font-size:13px">|</span> em vez do filete construído</li>
+      <li>Alterar espessura, altura ou afastamento da barra</li>
+      <li>Aplicar bordô na barra dentro da assinatura</li>
+      <li>Trocar a fonte, condensar, expandir ou inclinar a marca</li>
+      <li>Adicionar sombra, contorno, gradiente, brilho ou efeito metálico</li>
+      <li>Aplicar o logotipo sobre fotografia sem superfície de apoio</li>
+      <li>Acrescentar balança, martelo, pena, cérebro-circuito ou engrenagem</li>
+      <li>Usar o descritor abaixo de 8pt</li>
+    </ul>
+    <p class="sub">As únicas exceções à regra de cor são técnicas: monocromia em carimbo, gravação, bordado e impressão a uma cor. Fora dessas quatro, a regra não admite exceção.</p>
+  </section>
+
+  <div class="divisor" role="presentation"><span class="fio"></span><span class="barra-div"></span><span class="fio"></span></div>
+
+  <section class="secao" id="paleta">
+    <p class="eyebrow">§3</p>
+    <h2>Paleta</h2>
+    <p>Duas cores não fecham um sistema — faltam superfície e texto. Clique em qualquer amostra para copiar o código hexadecimal.</p>
+    <div class="paleta">
+      <button class="chip" data-hex="#6B1F2E">
+        <span class="amostra" style="background:#6B1F2E;color:#F4F1EC"><span class="nome-cor">Bordô</span><span><span class="hex-cor">#6B1F2E</span><span class="rgb-cor">R 107 · G 31 · B 46</span></span></span>
+        <span class="uso">Marca TEC, títulos-chave, o ponto de articulação</span>
+      </button>
+      <button class="chip" data-hex="#3F1119">
+        <span class="amostra" style="background:#3F1119;color:#F4F1EC"><span class="nome-cor">Bordô profundo</span><span><span class="hex-cor">#3F1119</span><span class="rgb-cor">R 63 · G 17 · B 25</span></span></span>
+        <span class="uso">Capas, avatar, fundos densos</span>
+      </button>
+      <button class="chip" data-hex="#A8ADB4">
+        <span class="amostra" style="background:#A8ADB4;color:#1C1B1A"><span class="nome-cor">Prata</span><span><span class="hex-cor">#A8ADB4</span><span class="rgb-cor">R 168 · G 173 · B 180</span></span></span>
+        <span class="uso">Fios, molduras, barra em negativo — nunca texto</span>
+      </button>
+      <button class="chip" data-hex="#DCDFE1">
+        <span class="amostra" style="background:#DCDFE1;color:#1C1B1A"><span class="nome-cor">Prata clara</span><span><span class="hex-cor">#DCDFE1</span><span class="rgb-cor">R 220 · G 223 · B 225</span></span></span>
+        <span class="uso">Superfícies secundárias, tabelas</span>
+      </button>
+      <button class="chip" data-hex="#F4F1EC">
+        <span class="amostra" style="background:#F4F1EC;color:#1C1B1A"><span class="nome-cor">Papel</span><span><span class="hex-cor">#F4F1EC</span><span class="rgb-cor">R 244 · G 241 · B 236</span></span></span>
+        <span class="uso">Fundo padrão de tudo</span>
+      </button>
+      <button class="chip" data-hex="#1C1B1A">
+        <span class="amostra" style="background:#1C1B1A;color:#F4F1EC"><span class="nome-cor">Tinta</span><span><span class="hex-cor">#1C1B1A</span><span class="rgb-cor">R 28 · G 27 · B 26</span></span></span>
+        <span class="uso">Texto principal, LAD, barra em positivo</span>
+      </button>
+      <button class="chip" data-hex="#55524E">
+        <span class="amostra" style="background:#55524E;color:#F4F1EC"><span class="nome-cor">Grafite</span><span><span class="hex-cor">#55524E</span><span class="rgb-cor">R 85 · G 82 · B 78</span></span></span>
+        <span class="uso">Texto secundário, legendas, descritor</span>
+      </button>
+    </div>
+
+    <h3>3.1 Proporção</h3>
+    <p>Aproximadamente <strong>60% Papel · 25% Tinta e Grafite · 10% Bordô · 5% Prata</strong>. O bordô é acento, não fundo padrão.</p>
+
+    <h3>3.2 A regra da prata</h3>
+    <div class="aviso">
+      <p>Prata sobre Papel tem contraste em torno de <strong>2:1</strong> — reprova nos critérios WCAG para qualquer texto, inclusive legenda.</p>
+      <p>A prata é <strong>material, não tinta</strong>: fio de 1px, borda de card, moldura de foto, barra em negativo, acabamento metálico no impresso. Para um cinza legível, use Grafite.</p>
+    </div>
+
+    <h3>3.3 Combinações aprovadas</h3>
+    <table>
+      <thead><tr><th>Fundo</th><th>Texto</th><th>Nível</th></tr></thead>
+      <tbody>
+        <tr><td>Papel</td><td>Tinta</td><td>AAA</td></tr>
+        <tr><td>Papel</td><td>Grafite</td><td>AA</td></tr>
+        <tr><td>Papel</td><td>Bordô</td><td>AA</td></tr>
+        <tr><td>Bordô</td><td>Papel</td><td>AA</td></tr>
+        <tr><td>Bordô profundo</td><td>Papel</td><td>AAA</td></tr>
+        <tr><td>Prata clara</td><td>Tinta</td><td>AA</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="divisor" role="presentation"><span class="fio"></span><span class="barra-div"></span><span class="fio"></span></div>
+
+  <section class="secao" id="tipografia">
+    <p class="eyebrow">§4</p>
+    <h2>Tipografia</h2>
+    <p>Duas famílias, ambas gratuitas no Google Fonts. Uma terceira entra só quando houver dado na tela.</p>
+
+    <div class="specimen">
+      <p class="amostra-serif">Quem responde quando o modelo erra</p>
+      <p class="ficha"><strong>Instrument Serif Regular</strong> — display. Títulos, chamadas, logotipo. Tem um único peso: a hierarquia vem de tamanho, itálico e espaço em branco, nunca de negrito. Nunca em texto corrido nem abaixo de 20px.</p>
+    </div>
+    <div class="specimen">
+      <p class="amostra-sans">Um sistema pode agrupar dez mil acórdãos por semelhança. Ele não sabe qual deles é o precedente que importa.</p>
+      <p class="ficha"><strong>Inter Regular e Medium</strong> — texto corrido, legendas, retrancas, descritor, interface.</p>
+    </div>
+    <div class="specimen">
+      <p class="amostra-mono">ART. 93, IX · CF/88 · 42.893 PETIÇÕES</p>
+      <p class="ficha"><strong>JetBrains Mono Regular</strong> — opcional. Só números, dispositivos legais, dados e código, em 12px.</p>
+    </div>
+
+    <h3>4.1 Instagram · 1080 × 1350px</h3>
+    <table>
+      <thead><tr><th>Elemento</th><th>Fonte</th><th>Tamanho</th><th>Tratamento</th></tr></thead>
+      <tbody>
+        <tr><td>Retranca</td><td>Inter Medium</td><td class="med">28px</td><td>Caixa alta, tracking +12%, Grafite</td></tr>
+        <tr><td>Título</td><td>Instrument Serif</td><td class="med">96–120px</td><td>Entrelinha 1.08, Tinta ou Bordô</td></tr>
+        <tr><td>Corpo</td><td>Inter Regular</td><td class="med">40px</td><td>Entrelinha 1.5, Grafite</td></tr>
+        <tr><td>Assinatura</td><td>Marca completa</td><td class="med">180px de largura</td><td>Sem descritor, rodapé do último card</td></tr>
+      </tbody>
+    </table>
+
+    <h3>4.2 Slides</h3>
+    <table>
+      <thead><tr><th>Elemento</th><th>Fonte</th><th>Tamanho</th></tr></thead>
+      <tbody>
+        <tr><td>Título</td><td>Instrument Serif</td><td class="med">40pt</td></tr>
+        <tr><td>Subtítulo</td><td>Inter Regular</td><td class="med">18pt, Grafite</td></tr>
+        <tr><td>Corpo</td><td>Inter Regular</td><td class="med">20pt</td></tr>
+        <tr><td>Rodapé</td><td>Inter Regular</td><td class="med">11pt, Grafite</td></tr>
+      </tbody>
+    </table>
+
+    <h3>4.3 Papers, certificados e documentos</h3>
+    <div class="aviso">
+      <p>Artigo submetido a periódico ou evento segue obrigatoriamente o template do edital — em geral Times New Roman ou Arial 12, ABNT. <strong>A marca não disputa com norma de submissão.</strong></p>
+      <p>Em Word, Instrument Serif e Inter caem para <strong>Georgia</strong> e <strong>Arial</strong>: são as substituições presentes em todos os sistemas, e o Word não carrega webfont.</p>
+    </div>
+    <table>
+      <thead><tr><th>Elemento</th><th>Fonte</th><th>Tamanho</th></tr></thead>
+      <tbody>
+        <tr><td>Título de capa</td><td>Instrument Serif</td><td class="med">24pt</td></tr>
+        <tr><td>Nome do participante (certificado)</td><td>Instrument Serif</td><td class="med">28pt</td></tr>
+        <tr><td>Título de seção (uso interno)</td><td>Inter Medium</td><td class="med">14pt</td></tr>
+        <tr><td>Corpo (uso interno)</td><td>Inter Regular</td><td class="med">11pt</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="divisor" role="presentation"><span class="fio"></span><span class="barra-div"></span><span class="fio"></span></div>
+
+  <section class="secao" id="voz">
+    <p class="eyebrow">§5</p>
+    <h2>Tom de voz: a tradutora</h2>
+    <p>A LADTEC explica tecnologia para juristas e Direito para técnicos. Não comenta de cima; traduz de dentro.</p>
+    <h3>As três regras</h3>
+    <p><strong>1. Todo termo técnico chega ancorado num análogo conhecido — e vice-versa.</strong> Não se explica <em>overfitting</em> citando função de perda: explica-se como o perito que decorou os casos antigos e erra o novo.</p>
+    <p><strong>2. Uma tecnicidade nova por parágrafo.</strong> Se a frase tem jargão jurídico e computacional ao mesmo tempo, um dos dois já precisa ter sido explicado antes.</p>
+    <p><strong>3. A pergunta vem antes da tese.</strong> Abre-se com o problema que qualquer pessoa reconhece; a doutrina entra depois.</p>
+
+    <h3>Na prática</h3>
+    <div class="par">
+      <div class="fala nao"><span class="marca-fala">Não</span>A opacidade algorítmica desafia o dever de motivação insculpido no art. 93, IX, da CF.</div>
+      <div class="fala sim"><span class="marca-fala">Sim</span>Uma sentença precisa dizer por quê. Um modelo, por enquanto, não diz — e o art. 93, IX, não abriu exceção para isso.</div>
+    </div>
+    <div class="par">
+      <div class="fala nao"><span class="marca-fala">Não</span>Redes neurais profundas revolucionam a análise de jurisprudência.</div>
+      <div class="fala sim"><span class="marca-fala">Sim</span>Um sistema pode agrupar dez mil acórdãos por semelhança. Ele não sabe qual deles é o precedente que importa — essa parte continua sendo sua.</div>
+    </div>
+
+    <h3>Vocabulário vetado</h3>
+    <div class="vetado">
+      <span>revolucionar</span><span>disrupção</span><span>o futuro chegou</span><span>a IA veio para ficar</span><span>robô juiz</span><span>game changer</span><span>ferramenta poderosa</span>
+    </div>
+
+    <h3>Registro por canal</h3>
+    <ul>
+      <li><strong>Instagram e redes:</strong> "a gente", "você". Segunda pessoa, frases curtas.</li>
+      <li><strong>Papers, certificados e comunicação institucional:</strong> terceira pessoa, impessoal.</li>
+      <li><strong>Slides e aulas:</strong> primeira pessoa do plural.</li>
+    </ul>
+    <p class="sub">O tom é o mesmo em todos. Só o registro muda.</p>
+  </section>
+
+  <div class="divisor" role="presentation"><span class="fio"></span><span class="barra-div"></span><span class="fio"></span></div>
+
+  <section class="secao" id="aplicacoes">
+    <p class="eyebrow">§6</p>
+    <h2>Regras de aplicação</h2>
+    <h3>6.1 Instagram</h3>
+    <ul>
+      <li>Fundo Papel como padrão. Post inteiramente Bordô profundo no máximo <strong>1 a cada 5</strong>.</li>
+      <li>Filete de Prata de <strong>1px</strong> separando retranca de título, com o ponto centrado.</li>
+      <li>Margem interna mínima de <strong>80px</strong> na arte de 1080×1350.</li>
+      <li>Assinatura em <strong>180px de largura</strong>, sem descritor, no rodapé do último card.</li>
+    </ul>
+    <h3>6.2 Slides</h3>
+    <ul>
+      <li>Filete Bordô de <strong>5px</strong> no topo de todo slide de conteúdo.</li>
+      <li>Capa em Bordô profundo com a assinatura em negativo, largura de <strong>30% da lâmina</strong>.</li>
+      <li>Máximo de <strong>três níveis hierárquicos</strong> por slide.</li>
+      <li>Sem grafismos tecnológicos genéricos: circuito, rede de pontos, hexágono, partícula.</li>
+    </ul>
+    <h3>6.3 Certificados</h3>
+    <ul>
+      <li>Margem mínima de <strong>18mm</strong>; barra Bordô de <strong>3mm</strong> na borda esquerda.</li>
+      <li>Nome do participante em Instrument Serif <strong>28pt</strong>.</li>
+      <li>Assinatura no rodapé com <strong>34mm</strong> de largura, descritor em 8pt ou suprimido.</li>
+    </ul>
+    <h3>6.4 Princípio de consistência</h3>
+    <div class="aviso">
+      <p><strong>A aplicação não precisa repetir o logotipo em todo lugar.</strong> A identidade também é reconhecida pela combinação de Papel, Bordô, tipografia editorial, barra e ponto.</p>
+      <p>Quando houver dúvida, reduzir elementos antes de adicionar novos. A força da LADTEC está na contenção.</p>
+    </div>
+  </section>
+
+  <div class="divisor" role="presentation"><span class="fio"></span><span class="barra-div"></span><span class="fio"></span></div>
+
+  <section class="secao" id="pendencias">
+    <p class="eyebrow">§7</p>
+    <h2>Pendências</h2>
+    <ul class="pendencias">
+      <li>Verificar disponibilidade do <span style="font-family:var(--mono);font-size:13px">@ladtec</span> e do domínio</li>
+      <li>Fechar o vetor da assinatura em SVG e PDF, com contornos convertidos</li>
+      <li>Confirmar os dados institucionais marcados na página de Apresentação</li>
+      <li>Definir o e-mail institucional real</li>
+      <li>Produzir o template de camiseta para a gráfica</li>
+      <li>Decidir sobre a exploração do §8: arquivar ou desenvolver</li>
+    </ul>
+  </section>
+
+  <div class="divisor" role="presentation"><span class="fio"></span><span class="barra-div"></span><span class="fio"></span></div>
+
+  <section class="secao" id="exploracao">
+    <p class="eyebrow">§8</p>
+    <h2>Exploração: sobreposição</h2>
+    <p><span class="selo">Não aprovado · estudo</span></p>
+    <p>A barra articula os dois campos mantendo-os distintos. Esta exploração testa a hipótese oposta: e se eles estivessem <strong>sobrepostos</strong>, com uma zona de interferência onde as duas cores se somam?</p>
+    <p class="sub">A favor: sobreposição é o que acontece quando um campo invade o outro, e a zona escura é a área de conflito — o objeto de estudo da liga. Contra: prejudica a legibilidade, exige controle de blend que não sobrevive à impressão a uma cor e é difícil de aplicar por não-designers.</p>
+    <div class="pranchas">
+      <div>
+        <div class="exploracao"><div class="sobreposto" style="font-size:52px"><span class="a">LAD</span><span class="b" style="margin-left:-.28em">TEC</span></div></div>
+        <p class="legenda">A · leve — o D e o T se tocam</p>
+      </div>
+      <div>
+        <div class="exploracao"><div class="sobreposto" style="font-size:52px"><span class="a">LAD</span><span class="b" style="margin-left:-.62em">TEC</span></div></div>
+        <p class="legenda">B · profunda — mais interferência, menos nome</p>
+      </div>
+      <div>
+        <div class="exploracao"><div class="sobreposto" style="font-size:46px;display:flex;flex-direction:column;align-items:center"><span class="a" style="letter-spacing:.06em">LAD</span><span class="b" style="letter-spacing:.06em;margin-top:-.42em">TEC</span></div></div>
+        <p class="legenda">C · vertical — empilhamento</p>
+      </div>
+    </div>
+    <div class="aviso">
+      <p>Se essa rota for adiante, ela <strong>substitui</strong> a barra — não convive com ela. Duas metáforas de encontro na mesma marca anulam uma à outra.</p>
+      <p>A variante C é a mais viável: preserva a leitura, cria a zona de interferência e funciona em uma cor só, porque a sobreposição vira variação de tom e não mistura de cor.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ================= 03 · IMAGENS ================= -->
+<div class="pagina" role="tabpanel" id="pg3" aria-labelledby="n3" hidden>
+
+  <section class="secao">
+    <p class="eyebrow">Arquivos de marca</p>
+    <h2>PNG com fundo transparente</h2>
+    <p>Todos gerados com as medidas do §2.3 e com a área de proteção já embutida no arquivo — não é preciso calcular margem ao aplicar. O quadriculado indica transparência.</p>
+
+    <div class="ativos">
+      <div class="ativo">
+        <div class="visor xadrez"><img src="assets/img/logo/assinatura-positiva.png" alt="Assinatura positiva LAD barra TEC em fundo transparente."></div>
+        <div class="info"><strong>Assinatura positiva</strong><span>Para fundo claro. LAD em Tinta, barra em Tinta, TEC em Bordô.</span><span class="px">1915 × 864</span>
+          <a class="link-baixar" download="ladtec-assinatura-positiva.png" href="assets/img/logo/assinatura-positiva.png">Baixar PNG</a></div>
+      </div>
+      <div class="ativo">
+        <div class="visor xadrez"><img src="assets/img/logo/assinatura-positiva-descritor.png" alt="Assinatura positiva com filete de prata e descritor abaixo."></div>
+        <div class="info"><strong>Positiva com descritor</strong><span>Versão institucional, com filete de Prata e o nome por extenso.</span><span class="px">1915 × 1008</span>
+          <a class="link-baixar" download="ladtec-assinatura-positiva-descritor.png" href="assets/img/logo/assinatura-positiva-descritor.png">Baixar PNG</a></div>
+      </div>
+      <div class="ativo">
+        <div class="visor escuro"><img src="assets/img/logo/assinatura-negativa.png" alt="Assinatura negativa em Papel com barra de Prata sobre fundo escuro."></div>
+        <div class="info"><strong>Assinatura negativa</strong><span>Para fundo Bordô ou escuro. Letras em Papel, barra em Prata.</span><span class="px">1915 × 864</span>
+          <a class="link-baixar" download="ladtec-assinatura-negativa.png" href="assets/img/logo/assinatura-negativa.png">Baixar PNG</a></div>
+      </div>
+      <div class="ativo">
+        <div class="visor escuro"><img src="assets/img/logo/assinatura-negativa-descritor.png" alt="Assinatura negativa com descritor sobre fundo escuro."></div>
+        <div class="info"><strong>Negativa com descritor</strong><span>Capa de slide, banner de evento e foto de perfil grande.</span><span class="px">1915 × 1008</span>
+          <a class="link-baixar" download="ladtec-assinatura-negativa-descritor.png" href="assets/img/logo/assinatura-negativa-descritor.png">Baixar PNG</a></div>
+      </div>
+      <div class="ativo">
+        <div class="visor xadrez"><img src="assets/img/logo/monocromatica-bordo.png" alt="Assinatura monocromática inteira em Bordô."></div>
+        <div class="info"><strong>Monocromática Bordô</strong><span>Carimbo, gravação, bordado e impressão a uma cor.</span><span class="px">1915 × 864</span>
+          <a class="link-baixar" download="ladtec-monocromatica-bordo.png" href="assets/img/logo/monocromatica-bordo.png">Baixar PNG</a></div>
+      </div>
+      <div class="ativo">
+        <div class="visor xadrez"><img src="assets/img/logo/monocromatica-tinta.png" alt="Assinatura monocromática inteira em Tinta."></div>
+        <div class="info"><strong>Monocromática Tinta</strong><span>Fax, xerox, documento em preto e branco.</span><span class="px">1915 × 864</span>
+          <a class="link-baixar" download="ladtec-monocromatica-tinta.png" href="assets/img/logo/monocromatica-tinta.png">Baixar PNG</a></div>
+      </div>
+      <div class="ativo">
+        <div class="visor escuro"><img src="assets/img/logo/monocromatica-papel.png" alt="Assinatura monocromática inteira em Papel sobre fundo escuro."></div>
+        <div class="info"><strong>Monocromática Papel</strong><span>Uma cor só sobre fundo escuro ou fotografia com tarja.</span><span class="px">1915 × 864</span>
+          <a class="link-baixar" download="ladtec-monocromatica-papel.png" href="assets/img/logo/monocromatica-papel.png">Baixar PNG</a></div>
+      </div>
+      <div class="ativo">
+        <div class="visor claro"><img src="assets/img/logo/avatar-1024.png" alt="Avatar circular em Bordô profundo com a assinatura completa."></div>
+        <div class="info"><strong>Avatar completo</strong><span>Instagram, LinkedIn, WhatsApp. Válido a partir de 64px.</span><span class="px">1024 × 1024</span>
+          <a class="link-baixar" download="ladtec-avatar-1024.png" href="assets/img/logo/avatar-1024.png">Baixar PNG</a></div>
+      </div>
+      <div class="ativo">
+        <div class="visor claro"><img src="assets/img/logo/marca-canto-lt-512.png" alt="Marca de canto L barra T em disco Bordô profundo."></div>
+        <div class="info"><strong>Marca de canto L | T</strong><span>Para 32 a 63px: comentários, stories, ícone de app.</span><span class="px">512 × 512</span>
+          <a class="link-baixar" download="ladtec-marca-canto-LT-512.png" href="assets/img/logo/marca-canto-lt-512.png">Baixar PNG</a></div>
+      </div>
+      <div class="ativo">
+        <div class="visor claro"><img src="assets/img/logo/favicon-256.png" alt="Favicon quadrado em Bordô com a letra L em serifa."></div>
+        <div class="info"><strong>Favicon</strong><span>Abaixo de 32px, quando nenhuma outra versão sobrevive.</span><span class="px">256 × 256</span>
+          <a class="link-baixar" download="ladtec-favicon-256.png" href="assets/img/logo/favicon-256.png">Baixar PNG</a></div>
+      </div>
+    </div>
+
+    <div class="aviso">
+      <p>PNG é formato de <strong>pixel</strong>: ampliar acima do tamanho original serrilha as serifas. Para banner grande, placa, camiseta ou qualquer impresso acima de A3, peça o SVG — está na lista de pendências do §7 da diretriz.</p>
+      <p>Os arquivos com fundo transparente não devem ser aplicados diretamente sobre fotografia. Use tarja ou superfície de apoio, conforme o §2.8.</p>
+    </div>
+  </section>
+
+  <div class="divisor" role="presentation"><span class="fio"></span><span class="barra-div"></span><span class="fio"></span></div>
+
+  <section class="secao">
+    <p class="eyebrow">Referências de aplicação</p>
+    <h2>Estudos iniciais</h2>
+    <p>Capturas em baixa resolução dos primeiros estudos. Servem para consulta de direção, <strong>não</strong> como arquivo de produção — os templates editáveis estão na página seguinte.</p>
+    <div class="referencias">
+      <figure class="referencia">
+        <img src="assets/img/referencias/assinatura.jpg" alt="Assinatura com descritor e filete horizontal com ponto de articulação.">
+        <figcaption><strong>Assinatura</strong>Composição editorial com descritor e divisor de ponto.</figcaption>
+      </figure>
+      <figure class="referencia">
+        <img src="assets/img/referencias/avatar.jpg" alt="Disco Bordô profundo com a assinatura em Papel.">
+        <figcaption><strong>Avatar</strong>Disco Bordô com a assinatura em negativo.</figcaption>
+      </figure>
+      <figure class="referencia">
+        <img src="assets/img/referencias/camiseta.jpg" alt="Camiseta clara com a assinatura e descritor no centro do peito.">
+        <figcaption><strong>Camiseta</strong>Marca pequena, muito respiro, nada competindo.</figcaption>
+      </figure>
+      <figure class="referencia">
+        <img src="assets/img/referencias/certificado.jpg" alt="Certificado com barra vertical Bordô à esquerda.">
+        <figcaption><strong>Certificado</strong>Estudo inicial — a versão de produção está em Templates.</figcaption>
+      </figure>
+      <figure class="referencia">
+        <img src="assets/img/referencias/slide.jpg" alt="Capa de slide em Bordô profundo com a marca centralizada.">
+        <figcaption><strong>Slide</strong>Capa em Bordô profundo, marca em negativo.</figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
+
+<!-- ================= 04 · TEMPLATES ================= -->
+<div class="pagina" role="tabpanel" id="pg4" aria-labelledby="n4" hidden>
+  <section class="secao">
+    <p class="eyebrow">Peças prontas</p>
+    <h2>Templates</h2>
+    <p>Vinte peças construídas com as medidas da diretriz — artes editáveis na página, além de um deck em PowerPoint e oito documentos em Word. Nas artes, <strong>todo texto é editável</strong>: clique e digite. O download sai em PNG no tamanho real de produção.</p>
+
+    <div class="abas" role="tablist" aria-label="Templates">
+      <button class="aba" role="tab" id="t-ig" aria-controls="p-ig" aria-selected="true">Instagram</button>
+      <button class="aba" role="tab" id="t-slide" aria-controls="p-slide" aria-selected="false">Slides</button>
+      <button class="aba" role="tab" id="t-cert" aria-controls="p-cert" aria-selected="false">Certificado</button>
+      <button class="aba" role="tab" id="t-paper" aria-controls="p-paper" aria-selected="false">Capa de paper</button>
+      <button class="aba" role="tab" id="t-email" aria-controls="p-email" aria-selected="false">E-mail</button>
+      <button class="aba" role="tab" id="t-docs" aria-controls="p-docs" aria-selected="false">Documentos</button>
+    </div>
+
+    <div class="painel" role="tabpanel" id="p-ig" aria-labelledby="t-ig">
+      <div class="grade">
+        <div class="peca">
+          <div class="cabeca"><span class="nome">Card de capa</span><span class="dim">1080 × 1350</span>
+            <button class="baixar" data-alvo="ig-capa" data-nome="ladtec-ig-capa">Baixar PNG</button></div>
+          <div class="palco" style="width:324px;height:405px">
+            <div class="arte" id="ig-capa" style="width:1080px;height:1350px;background:#F4F1EC;padding:80px;display:flex;flex-direction:column;transform:scale(.3)">
+              <div contenteditable style="font-family:var(--sans);font-weight:500;font-size:28px;letter-spacing:.12em;text-transform:uppercase;color:#55524E">Traduzindo · 04</div>
+              <div style="display:flex;align-items:center;margin:34px 0 46px">
+                <span style="height:1px;background:#A8ADB4;flex:1"></span><span style="width:9px;height:9px;border-radius:50%;background:#6B1F2E"></span><span style="height:1px;background:#A8ADB4;flex:1"></span>
+              </div>
+              <div contenteditable style="font-family:var(--serif);font-size:104px;line-height:1.08;color:#1C1B1A">O que é um <em style="color:#6B1F2E">embedding</em>, e por que a perícia deveria se importar</div>
+              <div style="flex:1"></div>
+              <div contenteditable style="font-family:var(--sans);font-size:40px;line-height:1.5;color:#55524E">Toda vez que um sistema “entende” um texto, ele vira número antes. Quem audita esse número?</div>
+            </div>
+          </div>
+          <p class="dica">Se o título passar de seis linhas, corte o título — não reduza o corpo.</p>
+        </div>
+        <div class="peca">
+          <div class="cabeca"><span class="nome">Card final</span><span class="dim">1080 × 1350</span>
+            <button class="baixar" data-alvo="ig-final" data-nome="ladtec-ig-final">Baixar PNG</button></div>
+          <div class="palco" style="width:324px;height:405px">
+            <div class="arte" id="ig-final" style="width:1080px;height:1350px;background:#3F1119;padding:80px;display:flex;flex-direction:column;transform:scale(.3)">
+              <div contenteditable style="font-family:var(--sans);font-weight:500;font-size:28px;letter-spacing:.12em;text-transform:uppercase;color:#A8ADB4">Traduzindo · 04</div>
+              <div style="flex:1"></div>
+              <div contenteditable style="font-family:var(--serif);font-size:86px;line-height:1.1;color:#F4F1EC">O nexo causal é uma pergunta sobre atribuição.</div>
+              <div style="flex:1"></div>
+              <div style="display:flex;align-items:center;margin:0 0 40px">
+                <span style="height:1px;background:#A8ADB4;flex:1"></span><span style="width:9px;height:9px;border-radius:50%;background:#F4F1EC"></span><span style="height:1px;background:#A8ADB4;flex:1"></span>
+              </div>
+              <div class="marca negativa" style="font-size:56px;align-self:center"><span class="lad">LAD</span><span class="barra"></span><span class="tec">TEC</span></div>
+            </div>
+          </div>
+          <p class="dica">Fundo bordô no máximo 1 a cada 5 posts. Este é o lugar natural para gastar essa cota.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="painel" role="tabpanel" id="p-slide" aria-labelledby="t-slide" hidden>
+      <div class="docs" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+        <figure class="doc">
+          <img src="assets/img/thumbs/slides.jpg" alt="Capa do template de slides em Bordô profundo com a assinatura em negativo.">
+          <figcaption><strong>Template de slides · PowerPoint</strong><span>Sete lâminas-modelo em 16:9 (13,33 × 7,5"): capa, divisória de seção, título e texto com nota lateral, três blocos comparativos, citação, dados e encerramento. Cada uma vem com nota de orientação no painel do apresentador.</span>
+            <a class="link-baixar" download="LADTEC-Slides.pptx" href="assets/downloads/ladtec-slides.pptx">Baixar .pptx</a></figcaption>
+        </figure>
+      </div>
+      <div class="aviso">
+        <p>Use o <strong>.pptx</strong> para apresentar: as lâminas são editáveis, a hierarquia já está montada e o rodapé se repete. Os PNG abaixo servem para prévia, para post ou para quando você precisa de uma imagem solta.</p>
+        <p>Duplique a lâmina-modelo mais próxima em vez de criar slide em branco — é o que mantém a apresentação inteira dentro do sistema.</p>
+      </div>
+      <div class="grade">
+        <div class="peca">
+          <div class="cabeca"><span class="nome">Capa</span><span class="dim">1920 × 1080</span>
+            <button class="baixar" data-alvo="sl-capa" data-nome="ladtec-slide-capa">Baixar PNG</button></div>
+          <div class="palco" style="width:538px;height:302px">
+            <div class="arte" id="sl-capa" style="width:1920px;height:1080px;background:#3F1119;padding:110px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;transform:scale(.28)">
+              <div class="marca negativa" style="font-size:120px"><span class="lad">LAD</span><span class="barra"></span><span class="tec">TEC</span></div>
+              <div style="display:flex;align-items:center;width:560px;margin:44px 0">
+                <span style="height:1px;background:#A8ADB4;flex:1"></span><span style="width:1px;height:44px;background:#A8ADB4"></span><span style="height:1px;background:#A8ADB4;flex:1"></span>
+              </div>
+              <div contenteditable style="font-family:var(--serif);font-size:64px;line-height:1.15;color:#F4F1EC;max-width:1200px">Quem responde quando o modelo erra</div>
+              <div contenteditable style="font-family:var(--sans);font-size:26px;letter-spacing:.16em;text-transform:uppercase;color:#A8ADB4;margin-top:34px">Módulo 2 · Responsabilidade civil</div>
+            </div>
+          </div>
+        </div>
+        <div class="peca">
+          <div class="cabeca"><span class="nome">Conteúdo</span><span class="dim">1920 × 1080</span>
+            <button class="baixar" data-alvo="sl-conteudo" data-nome="ladtec-slide-conteudo">Baixar PNG</button></div>
+          <div class="palco" style="width:538px;height:302px">
+            <div class="arte" id="sl-conteudo" style="width:1920px;height:1080px;background:#F4F1EC;border-top:5px solid #6B1F2E;padding:100px 110px;display:flex;flex-direction:column;transform:scale(.28)">
+              <div contenteditable style="font-family:var(--sans);font-weight:500;font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:#55524E">Módulo 2 · Responsabilidade civil</div>
+              <div contenteditable style="font-family:var(--serif);font-size:82px;line-height:1.12;color:#1C1B1A;margin:26px 0 18px;max-width:1400px">Três teorias em disputa</div>
+              <div contenteditable style="font-family:var(--sans);font-size:34px;line-height:1.5;color:#55524E;max-width:1200px">E o que cada uma exige de prova.</div>
+              <div style="flex:1"></div>
+              <div style="display:flex;gap:24px">
+                <div contenteditable style="flex:1;background:#DCDFE1;border-radius:6px;padding:36px;font-family:var(--sans);font-size:30px;color:#1C1B1A">Fato do serviço</div>
+                <div contenteditable style="flex:1;background:#DCDFE1;border-radius:6px;padding:36px;font-family:var(--sans);font-size:30px;color:#1C1B1A">Risco da atividade</div>
+                <div contenteditable style="flex:1;background:#6B1F2E;border-radius:6px;padding:36px;font-family:var(--sans);font-size:30px;color:#F4F1EC">Culpa do desenvolvedor</div>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:46px">
+                <span contenteditable style="font-family:var(--sans);font-size:22px;color:#55524E">Liga Acadêmica de Direito e Tecnologia</span>
+                <span class="marca" style="font-size:28px"><span class="lad">LAD</span><span class="barra"></span><span class="tec">TEC</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="painel" role="tabpanel" id="p-cert" aria-labelledby="t-cert" hidden>
+      <div class="docs" style="grid-template-columns:repeat(auto-fit,minmax(215px,1fr))">
+        <figure class="doc">
+          <img src="assets/img/thumbs/certificado-participacao.jpg" alt="Certificado de participação em A4 paisagem com barra Bordô à esquerda.">
+          <figcaption><strong>Participação</strong><span>Para quem assistiu a encontro, oficina ou palestra. Campos de atividade, data e carga horária.</span>
+            <a class="link-baixar" download="LADTEC-Certificado-participacao.docx" href="assets/downloads/ladtec-certificado-participacao.docx">Baixar .docx</a></figcaption>
+        </figure>
+        <figure class="doc">
+          <img src="assets/img/thumbs/certificado-apresentacao.jpg" alt="Certificado de apresentação de trabalho em A4 paisagem.">
+          <figcaption><strong>Apresentação de trabalho</strong><span>Para quem apresentou pesquisa nas atividades da liga.</span>
+            <a class="link-baixar" download="LADTEC-Certificado-apresentacao.docx" href="assets/downloads/ladtec-certificado-apresentacao.docx">Baixar .docx</a></figcaption>
+        </figure>
+        <figure class="doc">
+          <img src="assets/img/thumbs/certificado-membro.jpg" alt="Certificado de participação como membro em A4 paisagem.">
+          <figcaption><strong>Membro</strong><span>Para o quadro de membros ao fim do ciclo, com eixo e carga horária total.</span>
+            <a class="link-baixar" download="LADTEC-Certificado-membro.docx" href="assets/downloads/ladtec-certificado-membro.docx">Baixar .docx</a></figcaption>
+        </figure>
+      </div>
+      <div class="aviso">
+        <p>Os três em <strong>A4 paisagem</strong>, com barra Bordô de 3mm, nome em Georgia 28pt e duas linhas de assinatura. Use o Word para emitir em série — dá para fazer mala direta a partir de uma planilha de presença.</p>
+        <p>Para emitir um único certificado rápido, a versão em PNG abaixo resolve.</p>
+      </div>
+      <div class="grade">
+        <div class="peca">
+          <div class="cabeca"><span class="nome">Certificado de participação</span><span class="dim">A4 paisagem · 1123 × 794</span>
+            <button class="baixar" data-alvo="cert" data-nome="ladtec-certificado" data-escala="3">Baixar PNG</button></div>
+          <div class="palco" style="width:674px;height:476px">
+            <div class="arte" id="cert" style="width:1123px;height:794px;background:#F4F1EC;display:flex;transform:scale(.6)">
+              <div style="width:11px;background:#6B1F2E;flex:none"></div>
+              <div style="flex:1;padding:68px 68px 44px;display:flex;flex-direction:column">
+                <div contenteditable style="font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#55524E">Certificado de participação</div>
+                <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+                  <div style="font-family:var(--sans);font-size:15px;color:#55524E;margin-bottom:10px">Certificamos que</div>
+                  <div contenteditable style="font-family:var(--serif);font-size:56px;line-height:1.1;color:#1C1B1A">Maria Luiza Sousa</div>
+                  <div style="display:flex;align-items:center;width:320px;margin:22px 0">
+                    <span style="height:1px;background:#A8ADB4;flex:1"></span><span style="width:7px;height:7px;border-radius:50%;background:#6B1F2E"></span><span style="height:1px;background:#A8ADB4;flex:1"></span>
+                  </div>
+                  <div contenteditable style="font-family:var(--sans);font-size:17px;line-height:1.6;color:#1C1B1A;max-width:640px">participou do encontro <em>Direito e Tecnologia: do encontro à inovação</em>, promovido pela Liga Acadêmica de Direito e Tecnologia, com carga horária de 4 horas.</div>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:flex-end">
+                  <div>
+                    <div style="width:250px;height:1px;background:#55524E;margin-bottom:8px"></div>
+                    <div contenteditable style="font-family:var(--sans);font-size:13px;color:#55524E">Coordenação · LADTEC</div>
+                  </div>
+                  <div style="text-align:right">
+                    <div class="marca" style="font-size:26px"><span class="lad">LAD</span><span class="barra"></span><span class="tec">TEC</span></div>
+                    <div style="font-family:var(--sans);font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:#55524E;margin-top:6px">Liga Acadêmica de Direito e Tecnologia</div>
+                    <div contenteditable style="font-family:var(--sans);font-size:12px;color:#55524E;margin-top:12px">Vitória da Conquista, 16 de agosto de 2026</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="dica">Baixa em 3× (cerca de 3369 × 2382px), suficiente para impressão. O descritor está no mínimo de 8pt — não reduza mais.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="painel" role="tabpanel" id="p-paper" aria-labelledby="t-paper" hidden>
+      <div class="grade">
+        <div class="peca">
+          <div class="cabeca"><span class="nome">Folha de rosto</span><span class="dim">A4 retrato · 794 × 1123</span>
+            <button class="baixar" data-alvo="paper" data-nome="ladtec-capa-paper" data-escala="3">Baixar PNG</button></div>
+          <div class="palco" style="width:397px;height:562px">
+            <div class="arte" id="paper" style="width:794px;height:1123px;background:#F4F1EC;padding:76px 68px;display:flex;flex-direction:column;transform:scale(.5)">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start">
+                <span class="marca" style="font-size:26px"><span class="lad">LAD</span><span class="barra"></span><span class="tec">TEC</span></span>
+                <span contenteditable style="font-family:var(--mono);font-size:11px;color:#55524E">Série de pesquisa · 2026</span>
+              </div>
+              <div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+                <div contenteditable style="font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#55524E;margin-bottom:26px">Grupo de estudos · Responsabilidade civil</div>
+                <div contenteditable style="font-family:var(--serif);font-size:52px;line-height:1.1;color:#1C1B1A">Winston não tem CPF</div>
+                <div contenteditable style="font-family:var(--serif);font-style:italic;font-size:26px;line-height:1.3;color:#6B1F2E;margin-top:14px">Lacunas de responsabilidade civil diante de agentes artificiais</div>
+                <div style="display:flex;align-items:center;width:300px;margin:34px 0">
+                  <span style="height:1px;background:#A8ADB4;flex:1"></span><span style="width:7px;height:7px;border-radius:50%;background:#6B1F2E"></span><span style="height:1px;background:#A8ADB4;flex:1"></span>
+                </div>
+                <div contenteditable style="font-family:var(--sans);font-size:15px;line-height:1.7;color:#1C1B1A">Nome da autora<br><span style="color:#55524E;font-size:13px">Liga Acadêmica de Direito e Tecnologia</span></div>
+              </div>
+              <div contenteditable style="font-family:var(--sans);font-size:12px;color:#55524E;letter-spacing:.04em">Vitória da Conquista · Bahia · Agosto de 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="painel" role="tabpanel" id="p-email" aria-labelledby="t-email" hidden>
+      <p class="sub">Sem imagem e sem logotipo em anexo — a marca é montada em HTML puro, então sobrevive a cliente de e-mail que bloqueia imagens.</p>
+      <div class="email-preview" id="email-bloco">
+        <table style="border-collapse:collapse;font-family:Georgia,serif">
+          <tr>
+            <td style="padding-right:18px;border-right:1px solid #A8ADB4;vertical-align:middle">
+              <span style="font-family:Georgia,serif;font-size:26px;letter-spacing:.02em;color:#1C1B1A">LAD</span><span style="display:inline-block;width:2px;height:20px;background:#1C1B1A;margin:0 5px;vertical-align:-2px"></span><span style="font-family:Georgia,serif;font-size:26px;letter-spacing:.02em;color:#6B1F2E">TEC</span>
+            </td>
+            <td style="padding-left:18px;vertical-align:middle;font-family:Arial,Helvetica,sans-serif">
+              <div contenteditable style="font-size:14px;font-weight:bold;color:#1C1B1A">Nome da pessoa</div>
+              <div contenteditable style="font-size:12px;color:#55524E;padding-top:2px">Diretoria de Projetos</div>
+              <div style="font-size:11px;color:#55524E;padding-top:8px;letter-spacing:.1em;text-transform:uppercase">Liga Acadêmica de Direito e Tecnologia</div>
+              <div contenteditable style="font-size:11px;color:#6B1F2E;padding-top:4px">contato@ladtec.org · @ladtec</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <button class="copiar" id="btn-email">Copiar assinatura</button>
+      <p class="dica">A serifa cai para Georgia porque Instrument Serif não existe em cliente de e-mail — é a substituição mais próxima disponível em todos os sistemas.</p>
+    </div>
+
+    <div class="painel" role="tabpanel" id="p-docs" aria-labelledby="t-docs" hidden>
+      <p class="sub">Cinco documentos em <strong>.docx</strong>, com cabeçalho e rodapé nas seções nativas do Word. Os blocos com fundo prata são instruções de preenchimento: selecione e escreva por cima.</p>
+      <div class="docs">
+        <figure class="doc">
+          <img src="assets/img/thumbs/oficio.jpg" alt="Primeira página do template de ofício com cabeçalho e rodapé da marca.">
+          <figcaption><strong>Ofício</strong><span>Comunicação institucional com destinatário, assunto e assinatura.</span>
+            <a class="link-baixar" download="LADTEC-01-Oficio.docx" href="assets/downloads/ladtec-oficio.docx">Baixar .docx</a></figcaption>
+        </figure>
+        <figure class="doc">
+          <img src="assets/img/thumbs/ata.jpg" alt="Primeira página do template de ata de reunião com tabela de presenças.">
+          <figcaption><strong>Ata de reunião</strong><span>Presenças, pauta, deliberações, encaminhamentos e duas assinaturas.</span>
+            <a class="link-baixar" download="LADTEC-02-Ata-de-reuniao.docx" href="assets/downloads/ladtec-ata-de-reuniao.docx">Baixar .docx</a></figcaption>
+        </figure>
+        <figure class="doc">
+          <img src="assets/img/thumbs/declaracao.jpg" alt="Primeira página do template de declaração.">
+          <figcaption><strong>Declaração</strong><span>Vínculo, participação ou carga horária, em página única.</span>
+            <a class="link-baixar" download="LADTEC-03-Declaracao.docx" href="assets/downloads/ladtec-declaracao.docx">Baixar .docx</a></figcaption>
+        </figure>
+        <figure class="doc">
+          <img src="assets/img/thumbs/relatorio.jpg" alt="Primeira página do template de relatório de atividades.">
+          <figcaption><strong>Relatório de atividades</strong><span>Objeto, atividades, resultados, dificuldades e próximos passos.</span>
+            <a class="link-baixar" download="LADTEC-04-Relatorio-de-atividades.docx" href="assets/downloads/ladtec-relatorio-de-atividades.docx">Baixar .docx</a></figcaption>
+        </figure>
+        <figure class="doc">
+          <img src="assets/img/thumbs/artigo.jpg" alt="Capa do template de artigo acadêmico.">
+          <figcaption><strong>Artigo acadêmico</strong><span>Capa com a marca e miolo em ABNT: Times 12, entrelinha 1,5, recuo 1,25cm.</span>
+            <a class="link-baixar" download="LADTEC-05-Artigo-academico.docx" href="assets/downloads/ladtec-artigo-academico.docx">Baixar .docx</a></figcaption>
+        </figure>
+      </div>
+      <div class="aviso">
+        <p><strong>A barra no Word não é o caractere <span style="font-family:var(--mono);font-size:13px">|</span>.</strong> Ela é uma célula de tabela de 0,6mm preenchida em Tinta, entre LAD e TEC, dentro de uma tabela sem bordas — a única construção em .docx que produz um filete real. Ao editar o cabeçalho, não apague essa coluna.</p>
+        <p>Salve cada arquivo como <strong>.dotx</strong> (Salvar como → Modelo do Word) para que ninguém sobrescreva o original por acidente.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p><strong>LADTEC · Apresentação, Marca e Templates · v2.1</strong></p>
+  <p>Documento vivo. Alterações de paleta, tipografia, logotipo ou templates devem ser aprovadas pela diretoria e registradas em nova versão.</p>
+</footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
+<script>
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('on');setTimeout(function(){t.classList.remove('on');},1800);}
+
+/* páginas */
+var navs=document.querySelectorAll('.nav button');
+navs.forEach(function(b){
+  b.addEventListener('click',function(){
+    navs.forEach(function(o){o.setAttribute('aria-selected','false');document.getElementById(o.getAttribute('aria-controls')).hidden=true;});
+    b.setAttribute('aria-selected','true');
+    document.getElementById(b.getAttribute('aria-controls')).hidden=false;
+    window.scrollTo({top:0,behavior:'auto'});
+  });
+});
+
+/* abas internas de templates */
+var abas=document.querySelectorAll('.aba');
+abas.forEach(function(a){
+  a.addEventListener('click',function(){
+    abas.forEach(function(o){o.setAttribute('aria-selected','false');document.getElementById(o.getAttribute('aria-controls')).hidden=true;});
+    a.setAttribute('aria-selected','true');
+    document.getElementById(a.getAttribute('aria-controls')).hidden=false;
+  });
+});
+
+/* paleta */
+document.querySelectorAll('.chip').forEach(function(c){
+  c.addEventListener('click',function(){
+    var hex=c.dataset.hex;
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(hex).then(function(){toast(hex+' copiado');}).catch(function(){toast('Copie manualmente: '+hex);});
+    }else{toast('Copie manualmente: '+hex);}
+  });
+});
+
+/* download das artes */
+document.querySelectorAll('.baixar').forEach(function(btn){
+  btn.addEventListener('click',async function(){
+    var node=document.getElementById(btn.dataset.alvo);
+    var escala=parseFloat(btn.dataset.escala||'2');
+    var anterior=node.style.transform, rotulo=btn.textContent;
+    btn.disabled=true; btn.textContent='Gerando…';
+    try{
+      if(document.fonts&&document.fonts.ready){await document.fonts.ready;}
+      node.style.transform='none';
+      node.querySelectorAll('[contenteditable]').forEach(function(el){el.style.boxShadow='none';});
+      var url=await htmlToImage.toPng(node,{pixelRatio:escala,cacheBust:true});
+      var a=document.createElement('a');a.download=btn.dataset.nome+'.png';a.href=url;a.click();
+      toast('PNG gerado');
+    }catch(e){console.error(e);toast('Não foi possível gerar. Verifique a conexão.');}
+    finally{
+      node.style.transform=anterior;
+      node.querySelectorAll('[contenteditable]').forEach(function(el){el.style.boxShadow='';});
+      btn.disabled=false;btn.textContent=rotulo;
+    }
+  });
+});
+
+/* assinatura de e-mail */
+document.getElementById('btn-email').addEventListener('click',async function(){
+  var b=document.getElementById('email-bloco');
+  try{
+    if(navigator.clipboard&&window.ClipboardItem){
+      await navigator.clipboard.write([new ClipboardItem({
+        'text/html':new Blob([b.innerHTML],{type:'text/html'}),
+        'text/plain':new Blob([b.innerText],{type:'text/plain'})
+      })]);
+      toast('Assinatura copiada');
+    }else{
+      var r=document.createRange();r.selectNode(b);
+      var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+      document.execCommand('copy');s.removeAllRanges();toast('Assinatura copiada');
+    }
+  }catch(e){toast('Selecione o bloco e copie manualmente');}
+});
+</script>
+
+</body>
+</html>
